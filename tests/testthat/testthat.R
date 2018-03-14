@@ -21,9 +21,9 @@ test_that("PUC is correct", { for (i in c(1, 5, 10, 20, 40)) {
 }
 })
 
-pid_net <- infer_network(datapath, "PID")
-pid_truth <- read.table(paste(datadir, "pidc.txt", sep = ""))
-test_that("PID is correct", { for (i in c(1, 5, 10, 20, 40)) {
-  expect_equal(pid_net[i, 3], pid_truth[i * 2, 3])
+pidc_net <- infer_network(datapath, "PIDC")
+pidc_truth <- read.table(paste(datadir, "pidc.txt", sep = ""))
+test_that("PIDC is correct", { for (i in c(1, 5, 10, 20, 40)) {
+  expect_equal(pidc_net[i, 3], pidc_truth[i * 2, 3])
 }
 })

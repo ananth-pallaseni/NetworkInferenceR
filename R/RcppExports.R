@@ -9,7 +9,7 @@ infer_puc_network <- function(df) {
     .Call('_NetworkInferenceR_infer_puc_network', PACKAGE = 'NetworkInferenceR', df)
 }
 
-infer_pid_network <- function(df) {
-    .Call('_NetworkInferenceR_infer_pid_network', PACKAGE = 'NetworkInferenceR', df)
+infer_pidc_network <- function(df) {
+    .Call('_NetworkInferenceR_infer_pidc_network', PACKAGE = 'NetworkInferenceR', df)
 }
 
