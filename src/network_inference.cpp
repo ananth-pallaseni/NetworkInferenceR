@@ -112,7 +112,7 @@ NumericMatrix get_puc(const vector<Node> &nodes) {
   return puc_scores;
 }
 
-// Apply context to raw puc scores - transforms puc scores to pid scores
+// Apply context to raw puc scores - transforms puc scores to pidc scores
 NumericMatrix get_weights(const NumericMatrix puc_scores) {
   int ncol = puc_scores.ncol();
   int nrow = puc_scores.nrow();
@@ -191,7 +191,7 @@ DataFrame infer_puc_network(const DataFrame &df) {
 
 // Returns an unordered dataframe with columns: node1, node2 and weight.
 // [[Rcpp::export]]
-DataFrame infer_pid_network(const DataFrame &df) {
+DataFrame infer_pidc_network(const DataFrame &df) {
   vector<Node> nodes = get_nodes(df);
   NumericMatrix pidvals = get_weights(get_puc(nodes));
   return to_df(nodes, pidvals);

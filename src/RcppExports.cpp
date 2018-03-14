@@ -28,14 +28,14 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// infer_pid_network
-DataFrame infer_pid_network(const DataFrame& df);
-RcppExport SEXP _NetworkInferenceR_infer_pid_network(SEXP dfSEXP) {
+// infer_pidc_network
+DataFrame infer_pidc_network(const DataFrame& df);
+RcppExport SEXP _NetworkInferenceR_infer_pidc_network(SEXP dfSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const DataFrame& >::type df(dfSEXP);
-    rcpp_result_gen = Rcpp::wrap(infer_pid_network(df));
+    rcpp_result_gen = Rcpp::wrap(infer_pidc_network(df));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -43,7 +43,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_NetworkInferenceR_infer_mi_network", (DL_FUNC) &_NetworkInferenceR_infer_mi_network, 1},
     {"_NetworkInferenceR_infer_puc_network", (DL_FUNC) &_NetworkInferenceR_infer_puc_network, 1},
-    {"_NetworkInferenceR_infer_pid_network", (DL_FUNC) &_NetworkInferenceR_infer_pid_network, 1},
+    {"_NetworkInferenceR_infer_pidc_network", (DL_FUNC) &_NetworkInferenceR_infer_pidc_network, 1},
     {NULL, NULL, 0}
 };
 
